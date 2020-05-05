@@ -81,26 +81,26 @@ namespace PracTest2
                             if (col == SATURDAY || col == 7)
                             {
                                 //Set colour to Light Blue
-                                br.Color = Color.LightBlue;
+                                br.Color = WEEK_END_COLOR; //Color.LightBlue;
                             }
                             else
                             {
                                 //Set colour to White
-                                br.Color = Color.White;
-                            }//ENDIF
-                             //Draw appointment at current x and y position
-                             paper.FillRectangle(br, x, y, apptWidth, apptHeight);
-                             paper.DrawRectangle(pen, x, y, apptWidth, apptHeight);
+                                br.Color = WEEK_DAY_COLOR; //Color.White;
+                            }
+                            //Draw appointment at current x and y position
+                            paper.FillRectangle(br, x, y, apptWidth, apptHeight);
+                            paper.DrawRectangle(pen, x, y, apptWidth, apptHeight);
                             //Shift x position to right by appointment width
-                            x+= apptWidth;                           
-                        }//ENDFOR
-                         //Shift y position down by appointment height
-                         y += apptHeight;
+                            x += apptWidth;
+                        }
+                        //Shift y position down by appointment height
+                        y += apptHeight;
                         //Shift x position to beginning of row
                         x = 0;
-                    }//ENDFOR
+                    }
                 }
-                else 
+                else
                 {
                     //DISPLAY error message
                     MessageBox.Show("Enter a number of hours please");
@@ -115,7 +115,7 @@ namespace PracTest2
                 pictureBoxDisplay.Refresh();
                 //Give focus to the number of hours textbox
                 textBoxNumOfHours.Focus();
-            }//End Try
+            }
         }
     }
 }
