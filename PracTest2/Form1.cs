@@ -49,7 +49,7 @@ namespace PracTest2
         {
             //Where to draw the graphics
             Graphics paper = pictureBoxDisplay.CreateGraphics();
-            //Brush to fill blocks
+            //Brush to fill blocks and Pen to draw outline
             SolidBrush br = new SolidBrush(Color.White);
             Pen pen = new Pen(Color.Black, 3);
             //Declare variables
